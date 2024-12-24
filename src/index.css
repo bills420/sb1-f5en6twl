@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --matte-black: #1a1a1a;
+  --deep-black: #000000;
+  --pure-white: #ffffff;
+  --off-white: #f5f5f5;
+  --gradient-blue: #4a90e2;
+  --gradient-green: #43e97b;
+}
+
+:root.light {
+  --deep-black: #ffffff;
+  --pure-white: #000000;
+  --matte-black: #f5f5f5;
+  --off-white: #1a1a1a;
+}
+
+/* Base styles */
+body {
+  background-color: var(--deep-black);
+  color: var(--pure-white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme transitions */
+.theme-transition {
+  transition: all 0.3s ease;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Button gradient */
+.button-gradient {
+  background: linear-gradient(135deg, var(--gradient-blue), var(--gradient-green));
+  transition: opacity 0.3s ease;
+}
+
+/* Text shadow for better contrast */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
